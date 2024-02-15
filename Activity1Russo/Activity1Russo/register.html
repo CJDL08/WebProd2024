@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style_login.css">
+</head>
+<body>
+
+    <form id="registrationForm">
+        <h2>Register</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" onclick="registerUser()">Register</button>
+    </form>
+
+    <script>
+        function registerUser() {
+            // You can add more validation logic here before considering the user as registered
+
+            // For simplicity, let's just show a pop-up and redirect after a delay
+            alert('User is registered!'); // Replace with a more visually appealing pop-up
+
+            // Redirect after 2 seconds (2000 milliseconds)
+            setTimeout(function() {
+                window.location.href = 'login.html'; // Replace 'your-redirect-url' with the actual URL
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>

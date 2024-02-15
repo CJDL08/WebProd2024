@@ -1,0 +1,44 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style_login.css">
+</head>
+<body>
+
+    <form>
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" onclick="validateCredentials()">Login</button>
+    </form>
+
+    <script>
+        function validateCredentials() {
+            var enteredUsername = document.getElementById('username').value;
+            var enteredPassword = document.getElementById('password').value;
+
+            // Replace 'your-username' and 'your-password' with the actual credentials
+            var correctUsername = 'admin';
+            var correctPassword = 'admin';
+
+            if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
+                // Redirect if credentials are correct
+                window.location.href = 'main.html';
+            } else {
+                // Show an alert if credentials are incorrect
+                alert('Invalid credentials. Please try again.');
+            }
+        }
+    </script>
+
+</body>
+</html>
