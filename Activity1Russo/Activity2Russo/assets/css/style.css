@@ -4,7 +4,7 @@
   object-fit: cover;
   }
   .splide__slide {
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 
@@ -17,7 +17,11 @@ ul{
 }
 .container{
   width:50%;
-  animation: popUp 2s ease-in-out;
+  animation: mymove 2s ease-in-out;  
+}
+.splide__track{  
+  position: relative;
+  animation: mymove 5s infinite;
 }
 
 @keyframes popUp {
@@ -47,5 +51,13 @@ ul{
   100%{
     opacity: 1;
   }
+}
+@keyframes mymove {
+  0%   {top: 0px; left: 0px; background: rgb(255, 255, 255);}
+  25%  {top: 0px; left: 100px; background: rgb(0, 0, 0);}
+  50%  {top: 100px; left: 100px; background: rgb(54, 54, 54);}
+  75%  {top: 100px; left: 0px; background: rgb(131, 131, 131);}
+  100% {top: 0px; left: 0px; background: rgb(255, 255, 255);}
+  
 }
 
